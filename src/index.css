@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+@layer base {
+  body {
+    @apply bg-game-primary text-white min-h-screen antialiased;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  h1 {
+    @apply text-4xl font-bold;
+  }
+
+  h2 {
+    @apply text-3xl font-bold;
+  }
+
+  h3 {
+    @apply text-2xl font-bold;
+  }
+
+  h4 {
+    @apply text-xl font-bold;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-game-accent hover:bg-opacity-90 text-white font-semibold py-2 px-4 rounded-md transition-all duration-200;
+  }
+
+  .btn-secondary {
+    @apply bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-md transition-all duration-200;
+  }
+
+  .btn-outline {
+    @apply border-2 border-game-accent text-game-accent hover:bg-game-accent hover:text-white font-semibold py-2 px-4 rounded-md transition-all duration-200;
+  }
+
+  .input-primary {
+    @apply w-full bg-game-secondary border border-gray-700 rounded-md px-3 py-2 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-game-accent;
+  }
+
+  .card {
+    @apply bg-game-secondary rounded-lg shadow-lg p-6 border border-gray-700;
+  }
+}
